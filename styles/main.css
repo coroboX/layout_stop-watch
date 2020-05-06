@@ -1,0 +1,67 @@
+div {
+  box-sizing: border-box; }
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+.watch {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.watch__hand {
+  width: 1%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top;
+  -webkit-animation: roll 20s linear infinite;
+          animation: roll 20s linear infinite; }
+
+@-webkit-keyframes roll {
+  from {
+    transform: rotate(-180deg); }
+  to {
+    transform: rotate(180deg); } }
+
+@keyframes roll {
+  from {
+    transform: rotate(-180deg); }
+  to {
+    transform: rotate(180deg); } }
+  .watch__hand::before, .watch__hand::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    background-color: inherit; }
+  .watch__hand::before {
+    width: 300%;
+    transform: translate(-33%, -50%); }
+  .watch__hand::after {
+    width: 100%;
+    position: absolute; }
+  .watch__hand--minute {
+    height: 32%;
+    background-color: #c25d5d;
+    -webkit-animation-duration: 3600s;
+            animation-duration: 3600s; }
+    .watch__hand--minute::before {
+      height: 9%; }
+    .watch__hand--minute::after {
+      height: 4%;
+      bottom: -1.5%; }
+  .watch__hand--second {
+    height: 48%;
+    background-color: #5f98a8;
+    -webkit-animation-duration: 60s;
+            animation-duration: 60s; }
+    .watch__hand--second::before {
+      height: 6.5%; }
+    .watch__hand--second::after {
+      height: 3%;
+      bottom: -1.5%; }
+
+/*# sourceMappingURL=main.css.map */
