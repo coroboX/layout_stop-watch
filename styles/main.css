@@ -3,7 +3,6 @@ div {
 
 body,
 html {
-  width: 100%;
   height: 100%;
   margin: 0; }
 
@@ -25,8 +24,8 @@ html {
   top: 50%;
   left: 50%;
   transform-origin: top;
-  -webkit-animation: roll 20s linear infinite;
-          animation: roll 20s linear infinite; }
+  -webkit-animation: roll 60s linear infinite;
+          animation: roll 60s linear infinite; }
 
 @-webkit-keyframes roll {
   from {
@@ -39,7 +38,7 @@ html {
     transform: rotate(-180deg); }
   to {
     transform: rotate(180deg); } }
-  .watch__hand::before, .watch__hand::after {
+  .watch__hand::before {
     content: "";
     display: block;
     border-radius: 50%;
@@ -47,28 +46,21 @@ html {
   .watch__hand::before {
     width: 300%;
     transform: translate(-33%, -50%); }
-  .watch__hand::after {
-    width: 100%;
-    position: absolute; }
   .watch__hand--minute {
     height: 32%;
     background-color: #c25d5d;
+    border-radius: 50% / 1.5%;
     -webkit-animation-duration: 3600s;
             animation-duration: 3600s; }
     .watch__hand--minute::before {
       height: 9%; }
-    .watch__hand--minute::after {
-      height: 4%;
-      bottom: -1.5%; }
   .watch__hand--second {
     height: 48%;
     background-color: #5f98a8;
     -webkit-animation-duration: 60s;
-            animation-duration: 60s; }
+            animation-duration: 60s;
+    border-radius: 50% / 1%; }
     .watch__hand--second::before {
       height: 6.5%; }
-    .watch__hand--second::after {
-      height: 3%;
-      bottom: -1.5%; }
 
 /*# sourceMappingURL=main.css.map */
